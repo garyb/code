@@ -1,0 +1,10 @@
+title: Code
+baseurl: "/code" # the subpath of your site, e.g. /blog
+url: "http://slipthrough.net"
+twitter_username: gb_r
+github_username:  garyb
+respository: garyb/slipthrough-code
+permalink: /:year/:month/:day/:title/
+
+# Build settings
+markdown: kramdown
