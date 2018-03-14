@@ -4,190 +4,127 @@
 @charset "utf-8";
 @import '_syntax-highlighting';
 
+@import url('https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700');
 
-html, body {
-  margin: 0;
-  color: #111716;
+html {
+  font-family: 'Source Serif Pro', serif;
+  font-size: 20px;
+  line-height: 1.7;
   background: #fff;
-  font-family: 'Roboto', sans-serif;
-  line-height: 150%;
+  color: #555;
 }
 
-body {
-  border-top: 4px solid #edc374;
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4 {
+  color: #333;
+}
+
+h1, h2 {
+  font-family: 'Roboto Slab', serif;
+}
+
+h2 {
+  margin-top: 2rem;
+}
+
+header h1 {
+  color: #EB5E55;
 }
 
 main {
   margin: auto;
-  padding: 0 1em 2em;
-  max-width: 600px;
+  width: 35rem;
+  padding: 3rem;
 }
 
-header {
-  padding: 2.5em 0 1.5em;
+.projects {
+  list-style: none;
+  padding: 0;
 }
 
-section {
-  position: relative;
-  padding: 1.5em 0;
+.projects li {
+  margin-bottom: 2rem;
 }
 
-a {
-  color: #6a9591;
+.projects h3 {
+  margin-bottom: 0;
+  line-height: 1.4;
+}
+
+.date {
+  display: inline-block;
+  color: #666;
+  font-style: italic;
+}
+
+header a {
+  text-decoration: none;
+  color: inherit;
+}
+
+section a {
+  color: #EB5E55;
   color: transparent;
-  text-shadow: 0 0 #6a9591, .08em 0 0 #fff, 0 0, -.08em 0 0 #fff;
-  background: -webkit-linear-gradient(#d8e3e2, #d8e3e2) left 1.09em no-repeat;
-  background: linear-gradient(#d8e3e2, #d8e3e2) left 1.09em no-repeat;
+  text-shadow: 0 0 #EB5E55, .1em 0 0 #fff, 0 0, -.1em 0 0 #fff;
+  background: -webkit-linear-gradient(#fad7d4, #fad7d4) left 1.07em no-repeat;
+  background: linear-gradient(#fad7d4, #fad7d4) left 1.07em no-repeat;
   background-size: 100% 1px;
   text-decoration: none;
-  font-weight: 500;
 }
 
-a:hover {
-  color: #404e66;
-}
-
-h1, h2 {
-  font-weight: 500;
-  margin: 0;
+ul.links {
+  list-style: none;
   padding: 0;
 }
 
-h1 {
-  color: #404e66;
-}
-
-h1 a {
-  text-shadow: none;
-  background: none;
-}
-
-header h1, header h1 a {
-  color: #404e66;
-}
-
-article header h1, section h1, section h1 a {
-  color: #6a9591;
-}
-
-h2 {
-  font-size: 100%;
-}
-
-header h2 {
-  margin-top: 0.5em;
-}
-
-article h1+p, section h1+p {
-  margin-top: 2em;
-}
-
-article h2, section h2 {
-  margin-top: 2em;
-}
-
-article h2 a, section h2 a {
-  text-decoration: none;
-  background: none;
-  text-shadow: none;
-}
-
-hr {
-  border: none;
-  border-bottom: 1px solid #e5e5e5;
-  width: 38.2%;
-  margin: 2.5em auto;
-}
-
-p:last-child {
-  margin-bottom: 0;
-}
-
-section.link h2 a, section.link h1 a {
-  color: #6a9591;
-  color: transparent;
-  text-shadow: 0 0 #6a9591, .08em 0 0 #fff, 0 0, -.08em 0 0 #fff;
-  background: -webkit-linear-gradient(#d8e3e2, #d8e3e2) left 1.09em no-repeat;
-  background: linear-gradient(#d8e3e2, #d8e3e2) left 1.09em no-repeat;
-  background-size: calc(100% - 1.2em) 1px;
-}
-
-section.link h2 a:hover, section.link h1 a:hover {
-  color: #404e66;
-}
-
-section.link h2 a:after, section.link h1 a:after {
-  content: " →"
-}
-
-section img {
-  max-width: 100%;
-}
-
-ul {
-  padding-left: 1.7em;
-  list-style: square;
-}
-
-@media (min-width: 480px) {
-  body { font-size: 17px; }
-  main { padding: 0 2em 5em; }
-  header { padding: 3.5em 0 1.5em; }
-  section { padding: 1.5em 0; }
-}
-
-@media (min-width: 1000px) {
-  main { padding: 0 2em 8em; }
-  header { padding: 5em 0 1.5em; }
-  section { padding: 2.5em 0; }
-}
-
-/* --- */
-
-pre {
-  padding: 1em;
-  overflow: auto;
-  width: 100%;
-}
-
-pre code {
-  padding: 0;
+.launch::before {
+  content: "→";
+  padding-right: 0.3rem;
 }
 
 pre, code {
-  font-family: 'Roboto Mono', monospace;
-  font-size: 90%;
-  line-height: 150%;
+  font-size: 0.8rem;
+  color: #333;
 }
 
 code {
+  background: #eee;
+  padding: 0 0.3rem;
   display: inline-block;
-  padding: 0 0.35em;
-}
-
-/* --- */
-
-.postmeta {
-  margin-top: 2em;
-  font-size: 75%;
-}
-
-.video .wrapper {
   position: relative;
-  width: 100%;
-  height: 0;
-  padding-bottom: 56.2%;
+  top: -0.1rem;
 }
 
-.video .wrapper iframe {
-  position: absolute;
+pre {
+  background: #eee;
+  padding: 0.3rem;
+  overflow: auto;
+}
+
+pre code {
   top: 0;
-  left: 0;
-  width: 100% !important;
-  height: 100% !important;
 }
 
-figure {
-  margin: 1.5em auto;
-  text-align: center;
+img {
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  margin-bottom: 2rem;
+}
+
+.header h1 {
+  margin-bottom: 0;
+}
+
+.footer::before {
+  content: "—";
+  display: block;
+  margin: 2rem 0;
 }
