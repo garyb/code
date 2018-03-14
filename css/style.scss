@@ -42,20 +42,6 @@ main {
   padding: 3rem;
 }
 
-.projects {
-  list-style: none;
-  padding: 0;
-}
-
-.projects li {
-  margin-bottom: 2rem;
-}
-
-.projects h3 {
-  margin-bottom: 0;
-  line-height: 1.4;
-}
-
 .date {
   display: inline-block;
   color: #666;
@@ -69,22 +55,8 @@ header a {
 
 section a {
   color: #EB5E55;
-  color: transparent;
-  text-shadow: 0 0 #EB5E55, .1em 0 0 #fff, 0 0, -.1em 0 0 #fff;
-  background: -webkit-linear-gradient(#fad7d4, #fad7d4) left 1.07em no-repeat;
-  background: linear-gradient(#fad7d4, #fad7d4) left 1.07em no-repeat;
-  background-size: 100% 1px;
   text-decoration: none;
-}
-
-ul.links {
-  list-style: none;
-  padding: 0;
-}
-
-.launch::before {
-  content: "→";
-  padding-right: 0.3rem;
+  border-bottom: 1px solid #fad7d4;
 }
 
 pre, code {
